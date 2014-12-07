@@ -346,7 +346,7 @@ file already exists or the contents don't match it's PID.
 
     Dir.chdir options[:Chdir] do
       begin
-        require 'config/environment'
+        require './config/environment'
       rescue LoadError
         usage op, <<-EOF
 #{name} must be run from a Rails application's root to deliver email.
